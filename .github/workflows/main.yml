@@ -21,4 +21,4 @@ jobs:
       run: sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer # Adjust Xcode version as needed
 
     - name: Build and run tests
-      run: xcodebuild test -workspace DependencyInjectionVsDependencyInversion.xcodeproj -scheme DependencyInjectionVsDependencyInversion -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.0'
+      run: xcodebuild test -workspace DependencyInjectionVsDependencyInversion.xcworkspace -scheme DependencyInjectionVsDependencyInversion -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.0'

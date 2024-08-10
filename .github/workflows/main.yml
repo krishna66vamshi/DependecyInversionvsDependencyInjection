@@ -16,7 +16,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+    
+    - name: Set up Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_14.2.app/Contents/Developer # Adjust Xcode version as needed
+
+    - name: Build and run tests
+      run: xcodebuild test -workspace DependencyInjectionVsDependencyInversion.xcworkspace -scheme DependencyInjectionVsDependencyInversion -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.0'
